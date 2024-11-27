@@ -9,6 +9,10 @@
 }
 body {
   font-family: "Merriweather", serif;
+  .img {
+    max-width: 100%; 
+    height: auto; 
+  }
 }
 .container {
   width: 100%;
@@ -169,118 +173,8 @@ body {
   }
 }
 
-@media screen and (max-width: 1220px) {
-  .container {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .header__nav {
-    justify-content: space-between;
-    padding: 25px 40px;
-    &-toggler,
-    &-close {
-      display: block;
-    }
-  }
-  .header__nav-menu {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background: #222;
-    padding: 50px;
-    color: #fff;
-    ul {
-      flex-direction: column;
-      align-items: center;
-      &:nth-child(2) {
-        margin-top: 50px;
-      }
-    }
-    a {
-      color: #fff;
-    }
-  }
-}
-@media screen and (max-width: 1080px) {
-  .container {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-@media screen and (max-width: 950px) {
-  .header {
-    &__hero {
-      padding-left: 50px;
-    }
-  }
-  .service {
-    &__cards {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-}
-@media screen and (max-width: 768px) {
-  .container {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .service {
-    &__title {
-      h2 {
-        font-size: functions.pxToRem(20);
-      }
-    }
-    &__cards {
-      &-item {
-        font-size: 16px;
-        height: 300px;
-      }
-    }
-  }
-}
-@media screen and (max-width: 550px) {
-  .header {
-    &__hero {
-      h1 {
-        font-size: 1.5rem;
-      }
-    }
-  }
-  .service {
-    &__cards {
-      grid-template-columns: repeat(1, 1fr);
-      &-item {
-        justify-content: center;
-        padding: 50px 20px;
-      }
-    }
-  }
-}
-@media screen and (max-width: 425px) {
-  .header {
-    &__hero {
-      padding-left: 20px;
-    }
-    &__nav {
-      &-logo {
-        font-size: functions.pxToRem(20);
-        gap: 10px;
-      }
-    }
-  }
-}
 
-
+// 
 
 .B{
   margin-top: 60px;
@@ -384,53 +278,49 @@ body {
 }
 
 
-.stats2{
+.stats2 {
   margin-top: 255px;
-   width: 1920px;
-   height: 630px;
-   background-color: #faefef;
-   position: relative;
-   
-   .text-block2{
-    gap: 30px;
-    position: absolute;
-    top: 202px;
-    left: 405px;
+  max-width: 1440px;
+  height: 630px;
+  background-color: #faefef;
+  display: flex; 
+  flex-direction: column; 
+  gap: 50px; 
+  align-items: flex-start;
+  padding: 30px; 
 
-    .p{
-      margin-top: 30px;
-      size: 24px;
-      color: #BDBDBD;
-      
-
-    }
-    .h1{
-      margin-top: 30px;
-      color: #333333;
-      size: 48px;
-      margin: 0;
-
-    }
-   }
-
-   .M{
+  .text-block2 {
     display: flex;
-    gap: 40px;
-    position: absolute;
-    top: 405px;
-    width: 255px;
-    height: 130px;
-    left: 405px;
-   }
+    flex-direction: column; 
+    gap: 30px; 
+    margin-left: 405px; 
+    margin-top: 30px; 
+    .p {
+      font-size: 24px;
+      color: #BDBDBD;
+    }
+    .h1 {
+      font-size: 48px;
+      color: #333333;
+      margin: 0;
+    }
+  }
 
-   .button-group {
-    position: absolute;
-    top: 520px;
-    right: 190px;
+  .M {
+    display: flex;
+    gap: 40px; 
+    margin-left: 405px; 
+    width: auto; 
+    height: 130px; 
+  }
 
 
-    display: flex; 
+  .button-group {
+    margin-left: auto; 
+    display: flex;
     gap: 5px; 
+    margin-top: auto; 
+    padding-right: 190px;
   }
   
   .btn {
@@ -464,3 +354,186 @@ body {
 
 }
 
+
+// 
+
+@media screen and (max-width: 1220px) {
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  
+}
+@media screen and (max-width: 1100px) {
+  .header__nav {
+    justify-content: space-between;
+    padding: 25px 40px;
+    &-toggler,
+    &-close {
+      display: block;
+    }
+  }
+  .header__nav-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: #222;
+    padding: 50px;
+    color: #fff;
+    ul {
+      flex-direction: column;
+      align-items: center;
+      &:nth-child(2) {
+        margin-top: 50px;
+      }
+    }
+    a {
+      color: #fff;
+    }
+  }
+}
+@media screen and (max-width: 1080px) {
+
+  .stats2{
+      align-items: center;
+    .M{
+     display: grid;
+   grid-template-columns: repeat(2,1fr);
+
+   flex: 1;
+   
+    }
+   }
+
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+}
+@media screen and (max-width: 950px) {
+   
+    
+  .header {
+    &__hero {
+      padding-left: 50px;
+    }
+  }
+  .service {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+
+
+@media screen and (max-width: 900px ) {
+  .B{
+    display: block;
+  
+  }
+
+  
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+     
+    .B{
+      .stats{
+        display: block;
+        grid-template-columns: repeat(2,1fr);
+    
+        flex: 1;
+        
+      }
+    }
+  
+
+  .service {
+    &__title {
+      h2 {
+        font-size: functions.pxToRem(20);
+      }
+    }
+    &__cards {
+      &-item {
+        font-size: 16px;
+        height: 300px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+
+  .stats2{
+    max-width: 100%;
+ 
+    .M{
+     display: grid;
+   grid-template-columns: repeat(2,1fr);
+
+   flex: 1;
+   
+    }
+   }
+
+  .header {
+    &__hero {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .service {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+      &-item {
+        justify-content: center;
+        padding: 50px 20px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  .header {
+    &__hero {
+      padding-left: 20px;
+    }
+    &__nav {
+      &-logo {
+        font-size: functions.pxToRem(20);
+        gap: 10px;
+      }
+    }
+  }
+}
+
+
+  .stats2{
+ 
+     .M{
+      display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    flex: 1;
+    
+     }
+    }
+
+
+}
